@@ -532,7 +532,7 @@ def test_power_on_off(nvme0):
 
 def test_init_nvme_customerized(pcie):
     def nvme_init(nvme0):
-        logging.info("[GEET] user defined nvme init")
+        logging.info("[GEET] user defined nvme init. this will initialize the nvme device")
 
         nvme0[0x14] = 0
         while not (nvme0[0x1c]&0x1) == 0: pass
